@@ -1,0 +1,67 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Added position relative */
+}
+
+.wrapper_box {
+  display: grid;
+  grid-template-columns: repeat(6, 30px);
+  grid-template-rows: repeat(6, 30px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  background-color: gray;
+  margin: 5px;
+  padding: 4px;
+  text-align: center;
+}
+
+.control {
+  color: white;
+}
+
+.wrapper_time_score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.wrapper_time_score > div {
+  padding-right: 60px;
+  padding-left: 60px;
+}
+
+.box[data-disabled="true"] {
+  opacity: 0;
+}
+
+.btn {
+  width: 30px;
+  height: 30px;
+  border: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.player {
+  background-color: blue;
+  transition: all 0.2s ease;
+  position: absolute;
+}
+
+.player[data-moving="true"] {
+  background-color: transparent;
+}
